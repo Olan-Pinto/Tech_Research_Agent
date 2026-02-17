@@ -23,3 +23,4 @@ class OrchestratorResponse(BaseModel):
     model_used : str
     tokens_used: int
     error: str
+    cost_usd: float

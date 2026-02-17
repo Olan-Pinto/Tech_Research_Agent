@@ -1,10 +1,10 @@
 from models.schema import ConversationHistory, OrchestratorResponse
 from openai import OpenAI
+from utils.config import settings
 class OrchestratorAgent:
-    def __init__(self, config):
-        self.config = config
-        self.openai_api_key = config.OPENAI_API_KEY
-        self.openai_model = config.OPENAI_MODEL
+    def __init__(self):
+        self.openai_api_key = settings.OPENAI_API_KEY
+        self.openai_model = settings.OPENAI_MODEL
         self.system_prompt = """
         You are a technical research assistant.
         You help with programming tasks, code generation, debugging, software engineering, API's and technical problem-solving.
